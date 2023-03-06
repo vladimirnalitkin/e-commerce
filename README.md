@@ -1,6 +1,8 @@
 # Spring, MongoDB, Reactive
 
 This is implementation of Shopping Cart service.
+Shopping cart update implemented based on optimistic lock algorithm.
+Each Shopping cart update increase "version" of SC.
 
 ## Several Key points:
 - Session management does not a part of this service!  
