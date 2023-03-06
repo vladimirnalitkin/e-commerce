@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: ShoppingCartApplication
+  profiles:
+    active: dev
+  jmx:
+    enabled: false
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    properties:
+      time_zone: UTC
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  data:
+    mongodb:
+      username=someUser:
+      password=dontGuess:
+de:
+  flapdoodle:
+    mongodb:
+      embedded:
+        version: 3.6.1
+
+server:
+  port: 8081
+  servlet:
+    context-path: /
+    session:
+      cookie:
+        http-only: true
+
+custom:
+  cors:
+    end-points: '/v1/api/**,/management/**'  
+  security:
+    content-security-policy: "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com data:"
+

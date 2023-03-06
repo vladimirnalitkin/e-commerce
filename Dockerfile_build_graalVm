@@ -1,0 +1,23 @@
+FROM ghcr.io/graalvm/graalvm-ce:latest
+
+USER root
+
+RUN pwd
+RUN mkdir /work
+WORKDIR /work/
+RUN chown 1001 /work \
+    && chmod "g+rwX" /work \
+    && chown 1001:root /work
+
+RUN cd /work
+
+COPY ../.mvn /work/.mvn
+COPY ../src /work/src
+
+COPY ../mvnw /work
+COPY ../mvnw.cmd /work
+COPY ../pom.xml /work
+
+CMD "./mvnw native:compile -Dmaven.test.skip=true -Pnative"
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
