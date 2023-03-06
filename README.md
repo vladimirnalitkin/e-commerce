@@ -3,7 +3,7 @@
 This is implementation of Shopping Cart service.
 
 ## Several Key points:
-- Session management does not a part of this service! 
+- Session management does not a part of this service!  
 - This service required JWT token in header (for the anonymous users also)
 - For simplicity(for the example) encryption and decryption of JWT token does not provided.
 - Test JWT token required one field "sid" (OpenId specification) which is using as Shopping Cart ID
