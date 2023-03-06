@@ -11,6 +11,7 @@ This is implementation of Shopping Cart service.
 - Check style add as example (checkstyle.xml - does not contain correct rules)
 - Only one profile "dev" implemented (other "prod" and "cloud" are not) 
 - Deployment scripts/code does not implemented 
+- Logger configuration is not "prod" ready 
 
 ## Not include
 - JWT encryption and decryption
