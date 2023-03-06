@@ -28,3 +28,8 @@ We can compile this app as a native application
 ```
 ./startLocal.sh
 ```
+
+## Postman collection for API tests
+```
+test.postman_collection.json
+```
