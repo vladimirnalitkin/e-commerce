@@ -29,6 +29,7 @@ public class JWTFilter implements WebFilter {
         String jwt = extractTokenFromHeader(exchange.getRequest());
         log.debug("JWTFilter jwt = {}", jwt);
         return tokenValidator.getAuthentication(jwt)
+                .onErrorStop()
                 .flatMap(authentication -> chain.filter(exchange)
                         .contextWrite(ReactiveSecurityContextHolder.withAuthentication(authentication)));
     }
