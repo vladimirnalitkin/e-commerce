@@ -21,6 +21,34 @@
 					"raw": ""
 				},
 				"url": {
+					"raw": "localhost:8081/items",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get shopping cart items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {\"sid\": \"123\"}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
 					"raw": "localhost:8081/shopping-cart",
 					"host": [
 						"localhost"
@@ -34,7 +62,7 @@
 			"response": []
 		},
 		{
-			"name": "get items Copy",
+			"name": "add item to shopping cart",
 			"request": {
 				"method": "PUT",
 				"header": [
